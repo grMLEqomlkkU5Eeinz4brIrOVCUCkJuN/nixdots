@@ -79,10 +79,11 @@ Item { // Bar content region
         Bar.BarGroup {
             vertical: true
             padding: 8
-            Resources {
-                Layout.fillWidth: true
-                Layout.fillHeight: false
-            }
+            // Resources widget disabled - resource monitoring causes memory issues
+            // Resources {
+            //     Layout.fillWidth: true
+            //     Layout.fillHeight: false
+            // }
             
             HorizontalBarSeparator {}
 
@@ -185,12 +186,12 @@ Item { // Bar content region
                 Layout.fillHeight: true 
             }
 
-            Bar.SysTray {
-                vertical: true
-                Layout.fillWidth: true
-                Layout.fillHeight: false
-                invertSide: Config?.options.bar.bottom
-            }
+            //Bar.SysTray {
+            //    vertical: true
+            //    Layout.fillWidth: true
+            //    Layout.fillHeight: false
+            //    invertSide: Config?.options.bar.bottom
+            //}
 
             RippleButton { // Right sidebar button
                 id: rightSidebarButton

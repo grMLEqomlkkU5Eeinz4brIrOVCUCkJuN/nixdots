@@ -10,7 +10,7 @@ import qs.modules.common.functions
 import qs.modules.common.panels.lock
 import qs.modules.ii.bar as Bar
 import Quickshell
-import Quickshell.Services.SystemTray
+// import Quickshell.Services.SystemTray
 
 MouseArea {
     id: root
@@ -277,14 +277,14 @@ MouseArea {
         }
 
         // Keyboard layout (Fcitx)
-        Bar.SysTray {
-            Layout.rightMargin: 10
-            Layout.alignment: Qt.AlignVCenter
-            showSeparator: false
-            showOverflowMenu: false
-            pinnedItems: SystemTray.items.values.filter(i => i.id == "Fcitx")
-            visible: pinnedItems.length > 0
-        }
+        //Bar.SysTray {
+        //    Layout.rightMargin: 10
+        //    Layout.alignment: Qt.AlignVCenter
+        //    showSeparator: false
+        //    showOverflowMenu: false
+        //    pinnedItems: SystemTray.items.values.filter(i => i.id == "Fcitx")
+        //    visible: pinnedItems.length > 0
+        //}
     }
 
     // Right toolbar

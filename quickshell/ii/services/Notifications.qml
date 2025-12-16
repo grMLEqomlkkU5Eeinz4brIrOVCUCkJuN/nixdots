@@ -92,7 +92,7 @@ Singleton {
     function stringifyList(list) {
         return JSON.stringify(list.map((notif) => notifToJSON(notif)), null, 2);
     }
-    
+
     onListChanged: {
         // Update latest time for each app
         root.list.forEach((notif) => {

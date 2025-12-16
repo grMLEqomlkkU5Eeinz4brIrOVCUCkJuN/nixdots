@@ -80,17 +80,18 @@ Item { // Bar content region
             anchors.fill: parent
             spacing: Appearance.rounding.normal // Adding 17px of spacing
 
-            Resources { // Usage monitor
-                Layout.leftMargin: Appearance.rounding.screenRounding
-                Layout.fillHeight: true
-            }
+            // Resources widget disabled - resource monitoring causes memory issues
+            // Resources { // Usage monitor
+            //     Layout.leftMargin: Appearance.rounding.screenRounding
+            //     Layout.fillHeight: true
+            // }
 
             VerticalBarSeparator {
                 visible: Config.options?.bar.borderless
             }
 
             UtilButtons { // Utility items
-                Layout.leftMargin: 0 // Explicitly set left margin to 0
+                Layout.leftMargin: Appearance.rounding.screenRounding
                 visible: (Config.options.bar.verbose && root.useShortenedForm === 0)
                 Layout.alignment: Qt.AlignVCenter
             }
@@ -308,13 +309,13 @@ Item { // Bar content region
 
 
 
-            SysTray { // Tray
-                visible: root.useShortenedForm === 0
-                Layout.fillWidth: false
-                Layout.fillHeight: true
-                invertSide: Config?.options.bar.bottom
-                Layout.leftMargin: 0 // Explicitly remove left margin
-            }
+//            SysTray { // Tray
+//               visible: root.useShortenedForm === 0
+//                Layout.fillWidth: false
+//                Layout.fillHeight: true
+//                invertSide: Config?.options.bar.bottom
+//                Layout.leftMargin: 0 // Explicitly remove left margin
+//            }
 
             VerticalBarSeparator { // Separator after Tray
                 visible: Config.options?.bar.borderless
